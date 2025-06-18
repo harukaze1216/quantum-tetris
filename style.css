@@ -70,23 +70,6 @@ body {
     margin-right: auto;
     align-items: start;
     width: 100%;
-    /* Debug borders - remove after testing */
-    border: 2px solid red;
-}
-
-.manual-panel {
-    /* Debug borders - remove after testing */
-    border: 2px solid green !important;
-}
-
-.game-area {
-    /* Debug borders - remove after testing */
-    border: 2px solid blue !important;
-}
-
-.strategy-panel {
-    /* Debug borders - remove after testing */
-    border: 2px solid yellow !important;
 }
 
 .manual-panel, .strategy-panel {
