@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Tetris - The Multiverse Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="universe-container">
+        <div class="quantum-header">
+            <h1>⚛️ QUANTUM TETRIS ⚛️</h1>
+            <p class="subtitle">Experience Tetris Across Multiple Dimensions</p>
+        </div>
+        
+        <div class="multiverse-display">
+            <!-- Primary Universe -->
+            <div class="universe primary-universe">
+                <h3>Universe Alpha</h3>
+                <div class="game-board">
+                    <canvas id="alphaCanvas" width="300" height="450"></canvas>
+                </div>
+                <div class="universe-stats">
+                    <div class="stat">Score: <span id="alphaScore">0</span></div>
+                    <div class="stat">Level: <span id="alphaLevel">1</span></div>
+                    <div class="stat">Probability: <span id="alphaProbability">100%</span></div>
+                </div>
+            </div>
+            
+            <!-- Parallel Universe -->
+            <div class="universe parallel-universe">
+                <h3>Universe Beta</h3>
+                <div class="game-board">
+                    <canvas id="betaCanvas" width="300" height="450"></canvas>
+                </div>
+                <div class="universe-stats">
+                    <div class="stat">Score: <span id="betaScore">0</span></div>
+                    <div class="stat">Level: <span id="betaLevel">1</span></div>
+                    <div class="stat">Probability: <span id="betaProbability">0%</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quantum-controls">
+            <div class="control-section">
+                <h3>Quantum Mechanics</h3>
+                <div class="quantum-buttons">
+                    <button id="observeBtn" class="quantum-btn observe">🔍 Observe State</button>
+                    <button id="entangleBtn" class="quantum-btn entangle">🔗 Quantum Entangle</button>
+                    <button id="collapseBtn" class="quantum-btn collapse">💥 Wave Collapse</button>
+                    <button id="tunnelBtn" class="quantum-btn tunnel">🌀 Quantum Tunnel</button>
+                </div>
+            </div>
+            
+            <div class="control-section">
+                <h3>Spacetime Controls</h3>
+                <div class="spacetime-buttons">
+                    <button id="warpBtn" class="quantum-btn warp">⏰ Time Warp</button>
+                    <button id="gravityBtn" class="quantum-btn gravity">🌌 Gravity Shift</button>
+                    <button id="dimensionBtn" class="quantum-btn dimension">🔮 Dimension Jump</button>
+                </div>
+            </div>
+            
+            <div class="control-section">
+                <h3>Game Controls</h3>
+                <div class="game-buttons">
+                    <button id="pauseBtn" class="control-btn">Pause</button>
+                    <button id="resetBtn" class="control-btn">Reset Multiverse</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quantum-info">
+            <div class="info-panel">
+                <h3>Current Quantum State</h3>
+                <div id="quantumState" class="quantum-display">
+                    <div class="state-item">
+                        <span class="label">Piece Superposition:</span>
+                        <span id="superpositionCount" class="value">0</span>
+                    </div>
+                    <div class="state-item">
+                        <span class="label">Entangled Blocks:</span>
+                        <span id="entangledCount" class="value">0</span>
+                    </div>
+                    <div class="state-item">
+                        <span class="label">Reality Coherence:</span>
+                        <span id="coherence" class="value">100%</span>
+                    </div>
+                    <div class="state-item">
+                        <span class="label">Quantum Energy:</span>
+                        <span id="quantumEnergy" class="value">1000</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <h3>Next Quantum Pieces</h3>
+                <div class="next-pieces">
+                    <canvas id="nextAlpha" width="120" height="120"></canvas>
+                    <canvas id="nextBeta" width="120" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to Play Quantum Tetris</h3>
+            <ul>
+                <li><strong>Arrow Keys:</strong> Move pieces in current universe</li>
+                <li><strong>Space:</strong> Hard drop</li>
+                <li><strong>Shift:</strong> Switch between universes</li>
+                <li><strong>Observe:</strong> Collapse quantum superposition</li>
+                <li><strong>Entangle:</strong> Link pieces across universes</li>
+                <li><strong>Tunnel:</strong> Phase pieces through matter</li>
+                <li><strong>Time Warp:</strong> Reverse recent moves</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="quantum-physics.js"></script>
+    <script src="quantum-tetris.js"></script>
+</body>
+</html>
