@@ -69,6 +69,24 @@ body {
     margin-left: auto;
     margin-right: auto;
     align-items: start;
+    width: 100%;
+    /* Debug borders - remove after testing */
+    border: 2px solid red;
+}
+
+.manual-panel {
+    /* Debug borders - remove after testing */
+    border: 2px solid green !important;
+}
+
+.game-area {
+    /* Debug borders - remove after testing */
+    border: 2px solid blue !important;
+}
+
+.strategy-panel {
+    /* Debug borders - remove after testing */
+    border: 2px solid yellow !important;
 }
 
 .manual-panel, .strategy-panel {
@@ -232,6 +250,14 @@ body {
     color: #00ff88;
     font-size: 0.85rem;
     font-weight: bold;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 600px;
 }
 
 .multiverse-display {
@@ -553,6 +579,17 @@ canvas {
 }
 
 /* Responsive design */
+@media (max-width: 1400px) {
+    .main-game-area {
+        grid-template-columns: 280px 1fr 280px;
+        gap: 15px;
+    }
+    
+    .game-area {
+        min-width: 500px;
+    }
+}
+
 @media (max-width: 1200px) {
     .main-game-area {
         grid-template-columns: 1fr;
@@ -566,8 +603,9 @@ canvas {
         margin-bottom: 20px;
     }
     
-    .multiverse-display {
+    .game-area {
         order: 2;
+        min-width: auto;
     }
     
     .manual-panel {
