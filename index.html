@@ -13,30 +13,243 @@
             <p class="subtitle">Experience Tetris Across Multiple Dimensions</p>
         </div>
         
-        <div class="multiverse-display">
-            <!-- Primary Universe -->
-            <div class="universe primary-universe">
-                <h3>Universe Alpha</h3>
-                <div class="game-board">
-                    <canvas id="alphaCanvas" width="300" height="450"></canvas>
-                </div>
-                <div class="universe-stats">
-                    <div class="stat">Score: <span id="alphaScore">0</span></div>
-                    <div class="stat">Level: <span id="alphaLevel">1</span></div>
-                    <div class="stat">Probability: <span id="alphaProbability">100%</span></div>
+        <div class="main-game-area">
+            <!-- Manual -->
+            <div class="manual-panel">
+                <div class="manual-content">
+                    <h3>📖 操作説明書</h3>
+                    
+                    <div class="manual-section">
+                        <h4>🎮 基本操作</h4>
+                        <div class="manual-item">
+                            <span class="key">←→</span>
+                            <span class="desc">ピース左右移動</span>
+                        </div>
+                        <div class="manual-item">
+                            <span class="key">↑</span>
+                            <span class="desc">ピース回転</span>
+                        </div>
+                        <div class="manual-item">
+                            <span class="key">↓</span>
+                            <span class="desc">高速落下</span>
+                        </div>
+                        <div class="manual-item">
+                            <span class="key">Space</span>
+                            <span class="desc">一気に落下</span>
+                        </div>
+                        <div class="manual-item">
+                            <span class="key">Shift</span>
+                            <span class="desc">宇宙切り替え</span>
+                        </div>
+                    </div>
+
+                    <div class="manual-section">
+                        <h4>⚛️ 量子操作</h4>
+                        <div class="manual-item">
+                            <span class="energy">50</span>
+                            <div class="operation">
+                                <span class="op-name">🔍 観測</span>
+                                <span class="op-desc">重ね合わせ状態を確定</span>
+                            </div>
+                        </div>
+                        <div class="manual-item">
+                            <span class="energy">100</span>
+                            <div class="operation">
+                                <span class="op-name">🔗 もつれ</span>
+                                <span class="op-desc">両宇宙のピース連動</span>
+                            </div>
+                        </div>
+                        <div class="manual-item">
+                            <span class="energy">150</span>
+                            <div class="operation">
+                                <span class="op-name">💥 波動収束</span>
+                                <span class="op-desc">全量子状態を確定</span>
+                            </div>
+                        </div>
+                        <div class="manual-item">
+                            <span class="energy">50</span>
+                            <div class="operation">
+                                <span class="op-name">🌀 トンネル</span>
+                                <span class="op-desc">ブロック貫通移動</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="manual-section">
+                        <h4>🌌 時空操作</h4>
+                        <div class="manual-item">
+                            <span class="energy">200</span>
+                            <div class="operation">
+                                <span class="op-name">⏰ 時間逆行</span>
+                                <span class="op-desc">過去3手を取り消し</span>
+                            </div>
+                        </div>
+                        <div class="manual-item">
+                            <span class="energy">100</span>
+                            <div class="operation">
+                                <span class="op-name">🌌 重力変化</span>
+                                <span class="op-desc">重力場の歪み生成</span>
+                            </div>
+                        </div>
+                        <div class="manual-item">
+                            <span class="energy">Free</span>
+                            <div class="operation">
+                                <span class="op-name">🔮 次元ジャンプ</span>
+                                <span class="op-desc">操作宇宙の切り替え</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="manual-section">
+                        <h4>📊 量子状態の意味</h4>
+                        <div class="status-item">
+                            <span class="status-name">重ね合わせ:</span>
+                            <span class="status-desc">同時存在するピース数</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">もつれ:</span>
+                            <span class="status-desc">連動するブロック数</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">コヒーレンス:</span>
+                            <span class="status-desc">現実の安定度</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">量子エネルギー:</span>
+                            <span class="status-desc">特殊能力の燃料</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Parallel Universe -->
-            <div class="universe parallel-universe">
-                <h3>Universe Beta</h3>
-                <div class="game-board">
-                    <canvas id="betaCanvas" width="300" height="450"></canvas>
+
+            <!-- Game Area -->
+            <div class="multiverse-display">
+                <!-- Primary Universe -->
+                <div class="universe primary-universe">
+                    <h3>Universe Alpha</h3>
+                    <div class="game-board">
+                        <canvas id="alphaCanvas" width="300" height="450"></canvas>
+                    </div>
+                    <div class="universe-stats">
+                        <div class="stat">Score: <span id="alphaScore">0</span></div>
+                        <div class="stat">Level: <span id="alphaLevel">1</span></div>
+                        <div class="stat">Probability: <span id="alphaProbability">100%</span></div>
+                    </div>
                 </div>
-                <div class="universe-stats">
-                    <div class="stat">Score: <span id="betaScore">0</span></div>
-                    <div class="stat">Level: <span id="betaLevel">1</span></div>
-                    <div class="stat">Probability: <span id="betaProbability">0%</span></div>
+                
+                <!-- Parallel Universe -->
+                <div class="universe parallel-universe">
+                    <h3>Universe Beta</h3>
+                    <div class="game-board">
+                        <canvas id="betaCanvas" width="300" height="450"></canvas>
+                    </div>
+                    <div class="universe-stats">
+                        <div class="stat">Score: <span id="betaScore">0</span></div>
+                        <div class="stat">Level: <span id="betaLevel">1</span></div>
+                        <div class="stat">Probability: <span id="betaProbability">0%</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Guide -->
+            <div class="strategy-panel">
+                <div class="strategy-content">
+                    <h3>🎯 攻略のコツ</h3>
+                    
+                    <div class="strategy-section">
+                        <h4>🚀 初心者向け戦略</h4>
+                        <div class="strategy-tip">
+                            <span class="tip-icon">💡</span>
+                            <div class="tip-content">
+                                <span class="tip-title">まずはAlpha宇宙に集中</span>
+                                <span class="tip-desc">慣れるまでは一つの宇宙でプレイし、基本操作をマスターしよう</span>
+                            </div>
+                        </div>
+                        <div class="strategy-tip">
+                            <span class="tip-icon">⚡</span>
+                            <div class="tip-content">
+                                <span class="tip-title">量子エネルギーを節約</span>
+                                <span class="tip-desc">序盤は観測(50)とトンネル(50)だけ使って、高コスト能力は温存</span>
+                            </div>
+                        </div>
+                        <div class="strategy-tip">
+                            <span class="tip-icon">🔍</span>
+                            <div class="tip-content">
+                                <span class="tip-title">困った時は観測</span>
+                                <span class="tip-desc">ピースが不安定な時は観測で状態を確定。安定した配置を優先</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="strategy-section">
+                        <h4>🧠 中級者向け戦略</h4>
+                        <div class="strategy-tip">
+                            <span class="tip-icon">🔗</span>
+                            <div class="tip-content">
+                                <span class="tip-title">もつれを活用</span>
+                                <span class="tip-desc">長いピース(I字)でもつれを作成し、両宇宙同時にライン消去を狙う</span>
+                            </div>
+                        </div>
+                        <div class="strategy-tip">
+                            <span class="tip-icon">🌀</span>
+                            <div class="tip-content">
+                                <span class="tip-title">トンネルで緊急回避</span>
+                                <span class="tip-desc">積み上がった時はトンネルで下層に直接配置。危機脱出の切り札</span>
+                            </div>
+                        </div>
+                        <div class="strategy-tip">
+                            <span class="tip-icon">📊</span>
+                            <div class="tip-content">
+                                <span class="tip-title">確率を意識</span>
+                                <span class="tip-desc">高確率宇宙ほど高得点。観測頻度で確率をコントロール</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="strategy-section">
+                        <h4>👑 上級者向け戦略</h4>
+                        <div class="strategy-tip">
+                            <span class="tip-icon">⏰</span>
+                            <div class="tip-content">
+                                <span class="tip-title">時間逆行の極意</span>
+                                <span class="tip-desc">ミス直後の逆行よりも、戦略的配置前の逆行で高得点ライン作成</span>
+                            </div>
+                        </div>
+                        <div class="strategy-tip">
+                            <span class="tip-icon">🌌</span>
+                            <div class="tip-content">
+                                <span class="tip-title">重力変化コンボ</span>
+                                <span class="tip-desc">重力変化→多段ライン消去→時間逆行のコンボで超高得点</span>
+                            </div>
+                        </div>
+                        <div class="strategy-tip">
+                            <span class="tip-icon">💥</span>
+                            <div class="tip-content">
+                                <span class="tip-title">完全制御戦略</span>
+                                <span class="tip-desc">波動収束で全てを確定状態にし、完全予測可能な状況を作り出す</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="strategy-section">
+                        <h4>🏆 ハイスコア獲得法</h4>
+                        <div class="score-tip">
+                            <span class="score-icon">🎯</span>
+                            <span class="score-text">両宇宙同時ライン消去 = 基本点数 × 2</span>
+                        </div>
+                        <div class="score-tip">
+                            <span class="score-icon">📈</span>
+                            <span class="score-text">高コヒーレンス維持 = 最大1.5倍ボーナス</span>
+                        </div>
+                        <div class="score-tip">
+                            <span class="score-icon">🔮</span>
+                            <span class="score-text">確率差活用 = 高確率宇宙で大量消去</span>
+                        </div>
+                        <div class="score-tip">
+                            <span class="score-icon">⚛️</span>
+                            <span class="score-text">量子効果チェイン = 連続発動で指数的増加</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

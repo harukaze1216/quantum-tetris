@@ -59,11 +59,182 @@ body {
     50% { opacity: 1; }
 }
 
+.main-game-area {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.manual-panel, .strategy-panel {
+    width: 350px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    height: fit-content;
+    max-height: 800px;
+    overflow-y: auto;
+    backdrop-filter: blur(10px);
+}
+
+.manual-content, .strategy-content {
+    font-size: 0.9rem;
+}
+
+.manual-content h3, .strategy-content h3 {
+    color: #00ffff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.manual-section, .strategy-section {
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.manual-section h4, .strategy-section h4 {
+    color: #ffff00;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.manual-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 12px;
+}
+
+.key {
+    background: linear-gradient(45deg, #333, #555);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: center;
+    font-size: 0.8rem;
+    border: 1px solid #666;
+}
+
+.energy {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: #fff;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.desc {
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+.operation {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.op-name {
+    color: #00ffff;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.op-desc {
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+.status-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.status-name {
+    color: #00ffff;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.status-desc {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-top: 2px;
+}
+
+.strategy-tip {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border-left: 3px solid #00ffff;
+}
+
+.tip-icon {
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.tip-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tip-title {
+    color: #ffff00;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.tip-desc {
+    color: #ccc;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.score-tip {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 10px;
+    padding: 8px;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 6px;
+}
+
+.score-icon {
+    font-size: 1.1rem;
+}
+
+.score-text {
+    color: #00ff88;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
 .multiverse-display {
     display: flex;
     gap: 30px;
     justify-content: center;
-    margin-bottom: 30px;
     flex-wrap: wrap;
 }
 
@@ -347,7 +518,47 @@ canvas {
     box-shadow: 0 0 10px #00ffff;
 }
 
+/* Custom scrollbar for manual and strategy panels */
+.manual-panel::-webkit-scrollbar,
+.strategy-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.manual-panel::-webkit-scrollbar-track,
+.strategy-panel::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.manual-panel::-webkit-scrollbar-thumb,
+.strategy-panel::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.manual-panel::-webkit-scrollbar-thumb:hover,
+.strategy-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 255, 0.8);
+}
+
 /* Responsive design */
+@media (max-width: 1400px) {
+    .main-game-area {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .manual-panel, .strategy-panel {
+        width: 90%;
+        max-width: 600px;
+        max-height: 400px;
+    }
+    
+    .multiverse-display {
+        order: -1;
+    }
+}
+
 @media (max-width: 768px) {
     .multiverse-display {
         flex-direction: column;
@@ -364,5 +575,15 @@ canvas {
     
     .quantum-controls {
         grid-template-columns: 1fr;
+    }
+    
+    .manual-panel, .strategy-panel {
+        width: 95%;
+        max-height: 300px;
+        font-size: 0.8rem;
+    }
+    
+    .universe {
+        margin-bottom: 20px;
     }
 }
